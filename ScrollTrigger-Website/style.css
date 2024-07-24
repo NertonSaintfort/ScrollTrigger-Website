@@ -80,7 +80,7 @@ section{
   grid-template-columns: repeat(2,1fr);
   margin: auto;
   align-items: center;
-  /* max-width: 1300px; */
+  max-width: 1300px;
 }
 
 .gold{
@@ -219,13 +219,14 @@ button:hover{
 
 .color{
   font-size: 24px;
-  font-size: 700;
+  font-weight: 700;
   margin-bottom: .5rem;
 }
 
 .card span{
   text-transform: uppercase;
   font-weight: 200;
+  color: #fff;
 }
 
 .card:hover .color{

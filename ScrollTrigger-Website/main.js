@@ -109,3 +109,50 @@ gsap.utils.toArray('.line').forEach(line=>{
         scrollTrigger:line
     })
 })
+
+
+
+
+gsap.utils.toArray('.rotation').forEach(rotation=>{
+    gsap.fromTo(rotation,{
+        opacity:0,
+        rotation:350,
+        scale:.2
+    },{
+        opacity:1,
+        rotation:0,
+        scale:1,
+        duration:1,
+        delay:1,
+        scrollTrigger:rotation
+    })
+})
+
+gsap.fromTo('.card', {
+    opacity:0,
+    scale:.1
+},{
+    opacity:1,
+    scale:1,
+    duration:1,
+    delay:.5,
+    stagger:{
+        amount:1
+    },
+    scrollTrigger:'.card'
+})
+
+const menu = document.querySelector('.menu')
+
+gsap.from(menu.children,{
+    opacity:0,
+    x:50,
+    duration:1,
+    delay:.5,
+    stagger:{
+        amount:1
+    },
+    scrollTrigger:{
+        trigger:menu.children
+    }
+})
